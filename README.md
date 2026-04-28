@@ -1,54 +1,62 @@
-# ?? InsurTech AI - DÈtection de dommages vÈhicule
+# ?? InsurTech AI - D√©tection de dommages v√©hicule
 
 ## ?? Description du projet
 
-Ce projet a pour objectif de dÈvelopper un systËme automatique de classification de la sÈvÈritÈ des dommages automobiles (lÈger / moyen / sÈvËre) ‡ partir d'images, adaptÈ au marchÈ marocain de l'assurance.
+Ce projet a pour objectif de d√©velopper un syst√®me automatique de classification de la s√©v√©rit√© des dommages automobiles (l√©ger / moyen / s√©v√®re) √† partir d'images, adapt√© au march√© marocain de l'assurance.
 
 L'application permet :
-- Upload de 1 ‡ 5 photos d'un vÈhicule endommagÈ
-- Classification automatique de la sÈvÈritÈ
+- Upload de 1 √† 5 photos d'un v√©hicule endommag√©
+- Classification automatique de la s√©v√©rit√©
 - Visualisation Grad-CAM (carte de chaleur explicative)
-- DÈtection de fraude (incohÈrence entre photos)
-- Estimation des co˚ts de rÈparation en MAD
-- GÈnÈration de rapport PDF
-- Interface bilingue FranÁais / Arabe (avec support RTL)
+- D√©tection de fraude (incoh√©rence entre photos)
+- Estimation des co√ªts de r√©paration en MAD
+- G√©n√©ration de rapport PDF
+- Interface bilingue Fran√ßais / Arabe (avec support RTL)
 
 ## ??? Architecture technique
 
 | Composant | Technologie |
 |-----------|-------------|
 | Deep Learning | TensorFlow / Keras |
-| ModËle | ResNet50V2 (prÈ-entraÓnÈ ImageNet + fine-tuning) |
+| Mod√®le | ResNet50V2 (pr√©-entra√Æn√© ImageNet + fine-tuning) |
 | Interface utilisateur | Streamlit |
 | Traitement d'images | OpenCV, PIL |
-| GÈnÈration PDF | ReportLab |
+| G√©n√©ration PDF | ReportLab |
 | Visualisation | Plotly, Matplotlib |
 | Support arabe | Arabic-reshaper, Python-bidi |
 
-## ?? Performances du modËle
+## ?? Performances du mod√®le
 
-| MÈtrique | Score |
+| M√©trique | Score |
 |----------|-------|
 | Validation accuracy | **77,13%** |
 | Macro F1-Score | **80,2%** |
 
 ### Performances par classe
 
-| Classe | PrÈcision | Rappel | F1-Score |
+| Classe | Pr√©cision | Rappel | F1-Score |
 |--------|-----------|--------|----------|
-| LÈger | 94,0% | 91,4% | **92,7%** |
+| L√©ger | 94,0% | 91,4% | **92,7%** |
 | Moyen | 64,0% | 73,8% | **68,6%** |
-| SÈvËre | 81,6% | 76,9% | **79,2%** |
+| S√©v√®re | 81,6% | 76,9% | **79,2%** |
 
-## ?? Installation et exÈcution
+## ?? Installation et ex√©cution
 
-### PrÈrequis
-- Python 3.9 ou supÈrieur
+### Pr√©requis
+- Python 3.9 ou sup√©rieur
 - Pip (gestionnaire de paquets)
 
-### …tapes d'installation
+### √âtapes d'installation
 
-1. Cloner le dÈpÙt :
+1. Cloner le d√©p√¥t :
 ```bash
 git clone https://github.com/REHAB2911/car-damage-detection.git
 cd car-damage-detection
+## üì• T√©l√©chargement du mod√®le
+
+Le mod√®le entra√Æn√© √©tant trop volumineux pour GitHub, t√©l√©chargez-le ici : 
+[T√©l√©charger best_model_final2.h5](https://drive.google.com/file/d/1bu-pvsxp4p2GJeJmMUgnfUSuLxL7f52F/view?usp=sharing)
+
+Placez le fichier dans le dossier du projet avant de lancer l'application.
+
+
